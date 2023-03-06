@@ -1,0 +1,9 @@
+{
+    "description": "Service with manifest file",
+    "entrypoint": "app.py",
+    "execution_order": ["app_1.py", "app.py"],
+    "tags": ["devops"],
+    "trigger_events": ["ferris.apps.minio.file_uploaded"],
+    "allow_manual_triggering": true,
+    "active": true
+  }
