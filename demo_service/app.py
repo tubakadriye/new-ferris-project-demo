@@ -1,5 +1,6 @@
 import sys
 import json
+from ferris_cli import ApplicationConfigurator
 from ferris_cli import EventSender
 
 event_type = "my_custom_event_type"
