@@ -1,7 +1,8 @@
 import json
 
-class MyClass{
+class MyClass():
+    @staticmethod
     def print_payload(payload):
         print(payload)
 
-}
+
