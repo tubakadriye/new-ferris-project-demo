@@ -11,6 +11,6 @@ print('hello dx')
 platform_config = ApplicationConfigurator().get("ferris.env")
 print(platform_config)
 
-my_config = ApplicationConfigurator().get("ferris.packages.tuba.hello_config.config")["my_config"]
+my_config = ApplicationConfigurator().get("ferris.executer.packages.tuba.hello_config.config")["my_config"]
 print(my_config)
 
