@@ -6,7 +6,7 @@ from ferris_ef import get_param
 def hello_world(payload):
     print(payload)
 
-payload = json.loads(sys.arg[1])
+payload = json.loads(sys.argv[1])
 
 hello_world(payload)
 
