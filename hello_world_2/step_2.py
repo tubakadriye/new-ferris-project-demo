@@ -1,6 +1,6 @@
 import sys
 import json
 
-payload = json.loads(sys.args[1])
+payload = json.loads(sys.argv[1])
 print(payload)
 print('I am step 2')
