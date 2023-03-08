@@ -1,7 +1,7 @@
 import json
 
-class MyClass():
+class MyClass{
     def print_payload(payload):
         print(payload)
 
-
+}
