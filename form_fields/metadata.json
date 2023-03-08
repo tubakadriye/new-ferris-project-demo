@@ -1,0 +1,12 @@
+{
+    "fields": [
+      {
+        "type": "text",
+        "label": "Give a hostname",
+        "name": "sample_hostname",
+        "required": true,
+        "default": "digitec.ch",
+        "description": "Event Type Name"
+      }
+    ]
+  }
