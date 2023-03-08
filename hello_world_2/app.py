@@ -1,4 +1,5 @@
 import sys
 import json
 
-print('hello dx')
+payload = json.loads(sys.args[1])
+print(payload)
