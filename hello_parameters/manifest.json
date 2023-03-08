@@ -1,0 +1,9 @@
+{
+    "description": "Example of using parameters",
+    "entrypoint": "app.py",
+    "tags": ["test"],
+    "trigger_events": [],
+    "priority": 5,
+    "allow_manual_triggering": true,
+    "active": true
+  }
