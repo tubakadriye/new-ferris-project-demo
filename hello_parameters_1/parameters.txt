@@ -6,7 +6,8 @@
             "name" : "sample_name",
             "required": true,
             "description": "This field is required"
-        },
+        }
+        ,
         {
             "type":"textarea",
             "label" : "Enter your Address",

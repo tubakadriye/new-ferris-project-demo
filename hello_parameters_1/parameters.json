@@ -1,0 +1,11 @@
+{
+    "fields":[
+        {
+            "type":"text",
+            "label": "Enter your name",
+            "name" : "sample_name",
+            "required": true,
+            "description": "This field is required"
+        }
+    ]
+}
