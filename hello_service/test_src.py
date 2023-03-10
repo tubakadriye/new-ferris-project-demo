@@ -7,10 +7,9 @@ from ferris_cli.v2 import ApplicationConfigurator
 
 fa = json.loads(sys.argv[1])
 
-#service_name = fa['service_name']
-#config = ApplicationConfigurator.get(service_name)
+package_name = fa['package_name']
+config = ApplicationConfigurator.get(package_name)
 
-
-for k,v in fa.items():
-    print(f"{k} -> {v}")
+for k, v in config.items():
+    print(f"Key: {k} -> Value: {v} from config file!")
     print(v)
