@@ -7,10 +7,10 @@ from ferris_cli.v2 import ApplicationConfigurator
 
 fa = json.loads(sys.argv[1])
 
-service_name = fa['service_name']
-config = ApplicationConfigurator.get(service_name)
+#service_name = fa['service_name']
+#config = ApplicationConfigurator.get(service_name)
 
 
-for k,v in config.items():
+for k,v in fa.items():
     print(f"{k} -> {v}")
     print(v)
