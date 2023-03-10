@@ -1,0 +1,3 @@
+{
+    "PACKAGE_LIST": "requests stripe google-cloud-bigquery pandas"
+}

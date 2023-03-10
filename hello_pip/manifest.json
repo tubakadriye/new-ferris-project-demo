@@ -1,0 +1,9 @@
+{
+    "description": "Demo app to install python package",
+    "tags": ["dev"],
+    "trigger_events": [],
+    "entrypoint": "app.py",
+    "priority": 5,
+    "allow_manual_triggering": true,
+    "active": true
+  }
