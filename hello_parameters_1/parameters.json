@@ -63,7 +63,8 @@
             "type": "multiselect",
             "label": "Some multiselect",
             "name": "same_multiselect",
-            "default": [
+            "default": ["value 2", "value 3"],
+            "choices": [
                 {
                     "title": "Choice 1",
                     "value": "value 1"
