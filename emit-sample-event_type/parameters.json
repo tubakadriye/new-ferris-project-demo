@@ -1,0 +1,19 @@
+{
+    "fields": [
+      {
+        "type": "text",
+        "label": "Sample Event",
+        "name": "sample_event_type",
+        "required": true,
+        "default": "ferris.apps.myapp.my_trigger",
+        "description": "Event Type Name"
+      },
+      {
+        "type": "textarea",
+        "label": "Payload",
+        "name": "sample_payload",
+        "required": true,
+        "description": "Enter the sample payload in JSON format"
+      }
+    ]
+  }
