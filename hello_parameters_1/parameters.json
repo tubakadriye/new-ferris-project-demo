@@ -1,9 +1,101 @@
 {
     "fields":[
         {
+            "type":"text",
+            "label": "Enter your name",
+            "name" : "sample_name",
+            "required": true,
+            "description": "This field is required"
+        }
+        ,
+        {
             "type":"textarea",
             "label" : "Enter your Address",
             "name": "address"
+        },
+        {
+            "type":"file",
+            "label": "CV",
+            "name": "cv",
+            "data":{
+                "bucket":"testbucket",
+                "async":true
+            }
+        },
+        {
+            "type": "int",
+            "label":"Enter your age",
+            "name": "age",
+            "default": 1,
+            "min": 0,
+            "max":100
+        },
+        {
+            "type":"float",
+            "label": "Annual Salary",
+            "name": "annual_salary",
+            "placeholder": "0.01",
+            "step": 0.01,
+            "min": 0,
+            "max" : 10000000000
+        },
+        {
+            "type": "select",
+            "label": "Please select",
+            "name": "some_select",
+            "default": "value 2",
+            "choices": [
+                {
+                    "title": "Choice 1",
+                    "value": "value 1"
+                },
+                {
+                    "title": "Choice 2",
+                    "value": "value 2"
+                },
+                {
+                    "title": "Choice 3",
+                    "value": "value 3"
+                }
+            ]
+        },
+        {
+            "type": "multiselect",
+            "label": "Some multiselect",
+            "name": "same_multiselect",
+            "default": [
+                {
+                    "title": "Choice 1",
+                    "value": "value 1"
+                },
+                {
+                    "title": "Choice 2",
+                    "value": "value 2"
+                },
+                {
+                    "title": "Choice 3",
+                    "value": "value 3"
+                }
+            ]
+        },
+        {
+            "type": "radio",
+            "label": "Some radio",
+            "name": "some_radio",
+            "choices": [
+                {
+                    "title": "Choice 1",
+                    "value": "value 1"
+                },
+                {
+                    "title": "Choice 2",
+                    "value": "value 2"
+                },
+                {
+                    "title": "Choice 3",
+                    "value": "value 3"
+                }
+            ]
         }
     ]
 }
