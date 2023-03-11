@@ -1,0 +1,9 @@
+{
+    "description": "Generating UI from parameters.json file",
+    "entrypoint": "app.py",
+    "tags": ["cookbook"],
+    "trigger_events": [],
+    "priority": 5,
+    "allow_manual_triggering": true,
+    "active": true
+  }
