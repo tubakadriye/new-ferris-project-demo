@@ -12,7 +12,7 @@
         "type": "textarea",
         "label": "Payload",
         "name": "sample_payload",
-        "required": true,
+        "required": false,
         "description": "Enter the sample payload in JSON format"
       }
     ]
