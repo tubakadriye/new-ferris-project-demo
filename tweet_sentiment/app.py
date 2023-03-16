@@ -9,7 +9,8 @@ import openai
 from ferris_ef import context
 
 payload = json.loads(sys.argv[1])
-print(payload)
+for k,v in payload.items():
+    print(k,v)
 tweet = payload["tweet_text"]
 print("Tweet to analyze:", {tweet})
 
