@@ -1,0 +1,8 @@
+{
+    "description": "Example of Tweet analysis by AI",
+    "entrypoint": "app.py",
+    "tags": ["cookbook", "ai"],
+    "trigger_events": ["ferris.apps.demo.tweet.analyze"],
+    "allow_manual_triggering": true,
+    "active": true
+  }
