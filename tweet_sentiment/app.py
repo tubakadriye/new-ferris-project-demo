@@ -9,7 +9,7 @@ import openai
 from ferris_ef import context
 
 payload = json.loads(sys.argv[1])
-tweet = payload("tweet_text")
+tweet = payload["tweet_text"]
 print("Tweet to analyze:", {tweet})
 
 openai.api_key = context.secrets.get("OPENAI_API_KEY")
