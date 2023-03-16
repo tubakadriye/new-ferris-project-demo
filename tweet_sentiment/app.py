@@ -5,7 +5,7 @@ Sentiment classifications are: positive, neutral, or negative
 
 import json
 import sys
-import openapi
+import openai
 from ferris_ef import context
 
 payload = json.loads(sys.argv[1])
