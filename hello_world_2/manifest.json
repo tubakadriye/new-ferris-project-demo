@@ -1,0 +1,8 @@
+{
+    "description": "Service with manifest file",
+    "execution_order": ["app.py", "step_2.py"],
+    "tags": ["devops"],
+    "trigger_events": ["my_custom_event_type"],
+    "allow_manual_triggering": true,
+    "active": true
+  }

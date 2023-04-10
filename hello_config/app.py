@@ -3,9 +3,6 @@ import json
 from ferris_cli.ferris_cli import ApplicationConfigurator
 from ferris_ef import context
 
-payload = json.loads(sys.argv[1])
-print(payload)
-print("I am step 2")
 
 print('hello dx')
 

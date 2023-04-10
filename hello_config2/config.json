@@ -1,0 +1,8 @@
+{
+    "my_simple_attribute": "my_db_host_name",
+    "my_configuration_array": ["a","b","c"],
+    "my_configuration_dictionary": {
+      "alias": "johndoe",
+      "first_name": "john"
+    }
+  }

@@ -8,4 +8,6 @@ for k,v in fa.items():
 
 
 # Alternatively you can use the provided helper function.
-my_parameter = get_param("some_parameter")
+my_parameter = get_param("package_id")
+
+print("package_id", my_parameter)

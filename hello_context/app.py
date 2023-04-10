@@ -2,9 +2,6 @@ import sys
 import json
 from ferris_ef import context
 
-payload = json.loads(sys.argv[1])
-print(payload)
-print("I am step 2")
 
 print('hello dx')
 
