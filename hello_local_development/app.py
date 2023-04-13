@@ -1,3 +1,5 @@
+from ferris_ef import context
+
 print('hello dx')
 
 print("------- Get Service Info -------")
@@ -5,7 +7,6 @@ print(context.package.name)
 print(context.package.id)
 
 # code from hello_state
-from ferris_ef import context
 
 my_last_state = context.state.get() # returns a state previously set
 

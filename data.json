@@ -1,0 +1,29 @@
+{
+    "data": {
+      "datasets": [
+        {
+          "backgroundColor": [
+            "#008675",
+            "#971b2f",
+            "#448086",
+            "#007FA3"
+          ],
+          "data": [
+            608,
+            224,
+            0,
+            0
+          ],
+        }
+      ],
+      "labels": [
+        "completed",
+        "failed",
+        "pending",
+        "in progress"
+      ]
+    },
+    "title": "Executions by Status (Last 7 days)",
+    "type": "pie"
+  }
+  
