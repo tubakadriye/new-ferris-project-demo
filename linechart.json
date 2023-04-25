@@ -1,0 +1,62 @@
+{
+    "data": {
+      "datasets": [
+        {
+          "backgroundColor": "#FB5607",
+          "borderColor": "#FB5607",
+          "data": [
+            0,
+            0,
+            25,
+            0,
+            26,
+            0,
+            10
+          ],
+          "fill": true,
+          "label": "triggered"
+        },
+        {
+          "backgroundColor": "#8338EC",
+          "borderColor": "#8338EC",
+          "data": [
+            47,
+            96,
+            95,
+            98,
+            61,
+            88,
+            1
+          ],
+          "fill": true,
+          "label": "scheduled"
+        },
+        {
+          "backgroundColor": "#FFBE0B",
+          "borderColor": "#FFBE0B",
+          "data": [
+            9,
+            20,
+            12,
+            0,
+            4,
+            3,
+            0
+          ],
+          "fill": true,
+          "label": "manual"
+        }
+      ],
+      "labels": [
+        "04-06-22",
+        "05-06-22",
+        "06-06-22",
+        "07-06-22",
+        "08-06-22",
+        "09-06-22",
+        "05-02-23"
+      ]
+    },
+    "title": "Executions Trigger Type per Day (Last 5 days)",
+    "type": "line"
+  }

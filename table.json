@@ -1,0 +1,50 @@
+{
+    "columns": [
+      {
+        "field": "service_name",
+        "title": "Service Name"
+      },
+      {
+        "field": "avg_time",
+        "title": "Average Exec. Time"
+      },
+      {
+        "field": "exec_count",
+        "title": "Number of Exec."
+      }
+    ],
+    "data": [
+      {
+        "avg_time": 1714.141,
+        "exec_count": 733,
+        "service_name": "hello_world_2"
+      },
+      {
+        "avg_time": 3564.518,
+        "exec_count": 719,
+        "service_name": "demo_service"
+      },
+      {
+        "avg_time": 2264.09,
+        "exec_count": 15,
+        "service_name": "hello_world"
+      },
+      {
+        "avg_time": 1507.73,
+        "exec_count": 154,
+        "service_name": "super test sql 124"
+      },
+      {
+        "avg_time": 916.37,
+        "exec_count": 3,
+        "service_name": "test_manifest"
+      },
+      {
+        "avg_time": 770.68,
+        "exec_count": 3,
+        "service_name": "dfasdfasfda"
+      }
+    ],
+    "title": "Average Execution Time per Service in last 30 days",
+    "type": "table"
+  }
