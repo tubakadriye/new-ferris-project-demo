@@ -24,7 +24,7 @@ def count_keyword_mentions(url, keyword):
 
 def process(message):
     url = message['url']
-    keyword = 'climate'
+    keyword = 'Zurich'
 
     mentions =count_keyword_mentions(url, keyword)
 
