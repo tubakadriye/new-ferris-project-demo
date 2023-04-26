@@ -6,7 +6,7 @@ from ferris_sx.core import app
 from ferris_sx.utils import sx_producer
 
 
-
+print("Hello")
 
 def count_keyword_mentions(url, keyword):
     # Make a request to the website

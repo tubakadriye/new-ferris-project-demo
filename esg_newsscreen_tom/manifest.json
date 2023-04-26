@@ -1,7 +1,0 @@
-{
-    "description": "esg_news_trial",
-    "execution_order": ["Dockerfile", "esg_news_edge_adapter_fleet.py"],
-    "tags": ["esg_news"],
-    "allow_manual_triggering": true,
-    "active": true
-  }

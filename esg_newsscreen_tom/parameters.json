@@ -1,0 +1,11 @@
+{
+    "fields": [
+        {
+            "type": "text",
+            "label": "Search Keywords",
+            "name": "keywords",
+            "required": true,
+            "description": "List Keywords you want the News filtered for"
+        }
+    ]
+}
