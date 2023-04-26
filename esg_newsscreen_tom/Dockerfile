@@ -4,3 +4,5 @@ LABEL maintainer="tom@ferrislabs.net"
 RUN pip install ferris-sx
 RUN pip install bs4
 RUN pip install requests
+
+COPY esg_news_ea.py app.py
