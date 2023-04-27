@@ -1,0 +1,7 @@
+{
+    "description": "Enter the package to be installed",
+    "entrypoint": "utils.py",
+    "tags": ["cookbook", "utils", "devops", "demo"],
+    "allow_manual_triggering": true,
+    "active": true
+  }
