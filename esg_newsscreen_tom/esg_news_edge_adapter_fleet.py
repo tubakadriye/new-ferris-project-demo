@@ -2,7 +2,7 @@ import json
 import requests
 
 from bs4 import BeautifulSoup
-from ferris_sx.core import app
+#from ferris_sx.core import app
 from ferris_sx.utils import sx_producer
 
 
