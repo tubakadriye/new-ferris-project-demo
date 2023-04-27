@@ -5,7 +5,7 @@ import datetime
 from kafka import KafkaProducer
 from ferris_ef import context
 
-# Configure the News API endpoint and API key
+""" # Configure the News API endpoint and API key
 NEWS_API_ENDPOINT = 'https://newsapi.org/v2/everything'
 # newsapi_key = context.secrets.get('NEWS_API_KEY')
 newsapi_key = '470b0ff17b994482bf1f4eacb76d11eb'
@@ -44,7 +44,7 @@ for article in articles:
     producer.send(KAFKA_TOPIC, value=article_json.encode('utf-8'))
 
 # Close the Kafka producer
-producer.close()
+producer.close() """
 
 
 

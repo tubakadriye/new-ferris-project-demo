@@ -1,0 +1,1 @@
+print("Hello, chart json uploaded to Minio")
