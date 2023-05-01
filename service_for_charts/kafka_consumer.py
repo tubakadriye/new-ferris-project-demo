@@ -1,7 +1,8 @@
 from kafka import KafkaConsumer
 import json
 
-KAFKA_BROKER_ENDPOINT = 'localhost:9092'
+#KAFKA_BROKER_ENDPOINT = 'localhost:9092'
+KAFKA_BROKER_ENDPOINT = 'kafka.core:9092'
 KAFKA_TOPIC = 'esg-news'
 
 # Create a Kafka consumer instance
