@@ -1,9 +1,10 @@
+#python scan_news_keywords.py '{"keywords":"zurich"}'
 import json
 import sys
 import requests
 import datetime
 from kafka import KafkaProducer
-from ferris_ef import context
+#from ferris_ef import context
 
 # Configure the News API endpoint and API key
 NEWS_API_ENDPOINT = 'https://newsapi.org/v2/everything'
@@ -11,6 +12,7 @@ NEWS_API_ENDPOINT = 'https://newsapi.org/v2/everything'
 newsapi_key = '470b0ff17b994482bf1f4eacb76d11eb'
 # Configure the Kafka broker endpoint and topic
 KAFKA_BROKER_ENDPOINT = 'kafka.core:9092'
+#KAFKA_BROKER_ENDPOINT = 'localhost:9092'
 KAFKA_TOPIC = 'esg-news'
 
 # Configure the search query to fetch news mentioning Zurich
@@ -45,27 +47,3 @@ for article in articles:
 
 # Close the Kafka producer
 producer.close()
-
-
-
-
-
-
-# Create a Kafka consumer instance
-from kafka import KafkaConsumer
-import json
-
-KAFKA_BROKER_ENDPOINT = 'localhost:9092'
-KAFKA_TOPIC = 'esg-news'
-
-# Create a Kafka consumer instance
-consumer = KafkaConsumer(
-    KAFKA_TOPIC,
-    bootstrap_servers=KAFKA_BROKER_ENDPOINT,
-    value_deserializer=lambda m: json.loads(m.decode('utf-8')),
-    auto_offset_reset='earliest'  # Start reading from the beginning of the topic
-)
-
-# Print the messages received from the Kafka topic
-for message in consumer:
-    print("Message: ", message.value)
