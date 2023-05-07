@@ -1,6 +1,6 @@
 {
     "description": "Service for creating Charts",
-    "execution_order": ["parameters.json", "scan_news_keywords.py", "kafka_consumer.py", "app.py"],
+    "execution_order": ["parameters.json", "scan_news_keywords.py", "app.py"],
     "allow_manual_triggering": true,
     "tags": ["charts", "esg-newsscreen"],
     "trigger_events": [""],
