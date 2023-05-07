@@ -6,29 +6,9 @@
             "name": "keywords",
             "required": true,
             "description": "List Keywords you want the News filtered for"
-        },
-
-        {
-            "type" : "select",
-            "label" : "Chart type",
-            "name" : "chart_type",
-            "description" : "The chart type to show the data",
-            "default": "pie",
-            "choices" : [
-                {
-                    "title" : "Pie Chart",
-                    "value" : "pie" 
-                },
-                {
-                    "title": "Line Chart",
-                    "value" : "line"
-                },
-                {
-                    "title" : "Table",
-                    "value" : "table"
-                }
-            ]
         }
+
+       
     ]
 
 
