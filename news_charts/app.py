@@ -2,10 +2,6 @@
 ## export REQUESTS_CA_BUNDLE=/Users/tubakaraca/FerrisRootCA.pem
 ## export SSL_CERT_FILE=/Users/tubakaraca/FerrisRootCA.pem
 
-
-## if still get error 
-## export REQUESTS_CA_BUNDLE=/Users/tubakaraca/opt/anaconda3/lib/python3.9/site-packages/certifi/cacert.pem
-
 from flask import Flask, jsonify, render_template, request
 import json
 from kafka import KafkaConsumer
@@ -18,8 +14,8 @@ from minio import Minio
 from minio.error import S3Error
 import sys
 
-KAFKA_BROKER_ENDPOINT = 'localhost:9092'
-#KAFKA_BROKER_ENDPOINT = 'kafka.core:9092'
+#KAFKA_BROKER_ENDPOINT = 'localhost:9092'
+KAFKA_BROKER_ENDPOINT = 'kafka.core:9092'
 KAFKA_TOPIC = 'esg-news'
 
 
@@ -27,7 +23,6 @@ KAFKA_TOPIC = 'esg-news'
 payload = json.loads(sys.argv[1])
 chart_type = payload['chart_type']
 query = payload['keywords']
-
 
 logging.basicConfig(
     level=logging.INFO,
@@ -94,7 +89,7 @@ def fetch_data_from_kafka(chart_type):
                 ],
                 "labels": []
             },
-            "title": f"ESG_News_Screen_Pie_Chart {query.upper()}" ,
+            "title": f"ESG_News_Screen_Pie_Chart {query}",
             "type": "pie"
         }
 
@@ -102,31 +97,31 @@ def fetch_data_from_kafka(chart_type):
         data = {
             "data": {
                 "datasets": [
-                    """ {
+                    {
                         "backgroundColor": [] ,#distinct_colors[0],
                         "borderColor": [] , # distinct_colors[0],
                         "data": [], #[random.randint(0, 100) for _ in range(7)],
                         "fill": True,
-                        "label": ""
-                    } """ #,
-                    # {
-                    #     "backgroundColor": [] , #distinct_colors[1],
-                    #     "borderColor": [],  #distinct_colors[1],
-                    #     "data": [],#[random.randint(0, 100) for _ in range(7)],
-                    #     "fill": True
-                    #     #"label": "scheduled"
-                    # },
-                    # {
-                    #     "backgroundColor": distinct_colors[2],
-                    #     "borderColor": distinct_colors[2],
-                    #     "data": [random.randint(0, 100) for _ in range(7)],
-                    #     "fill": True,
-                    #     #"label": "manual"
-                    # }
+                        "label": "triggered"
+                    },
+                    {
+                        "backgroundColor": distinct_colors[1],
+                        "borderColor": distinct_colors[1],
+                        "data": [random.randint(0, 100) for _ in range(7)],
+                        "fill": True,
+                        "label": "scheduled"
+                    },
+                    {
+                        "backgroundColor": distinct_colors[2],
+                        "borderColor": distinct_colors[2],
+                        "data": [random.randint(0, 100) for _ in range(7)],
+                        "fill": True,
+                        "label": "manual"
+                    }
                 ],
-                "labels": []#f"0{i}-06-22" for i in range(1, 8)]
+                "labels": [f"0{i}-06-22" for i in range(1, 8)]
             },
-            "title": f"ESG_News_Screen_Line_Chart {query.upper()}",
+            "title": f"ESG_News_Screen_Line_Chart {query}",
             "type": "line"
         }
 
@@ -148,7 +143,7 @@ def fetch_data_from_kafka(chart_type):
                 #     "source_name": f"Source {i}"
                 # } for i in range(1, 6) """
             ],
-            "title": f"ESG_News_Screen_Table {query.upper()}",
+            "title": f"ESG_News_Screen_Table_Chart {query}",
             "type": "table"
         }
 
@@ -162,16 +157,13 @@ def fetch_data_from_kafka(chart_type):
         logger.info(f"Event received: {event}")
 
         source_name = event['source']['name']
-        published_at = event['publishedAt'][:10]
-        print(published_at)
-
 
         if chart_type == 'pie':
             #print('hello')
             #print(data)
             #print(data['data'])
             if source_name not in data['data']['labels']:
-                #print('hello')
+                print('hello')
                 data['data']['labels'].append(source_name)
                 data['data']['datasets'][0]['data'].append(1)
                 color_index = len(data['data']['labels']) - 1
@@ -181,38 +173,8 @@ def fetch_data_from_kafka(chart_type):
                 data['data']['datasets'][0]['data'][index] += 1
 
         elif chart_type == 'line':
-            if source_name not in [dataset['label'] for dataset in data['data']['datasets']]:
-                color_index = len(data['data']['labels']) - 1
-                data['data']['datasets'].append({
-                    "label": source_name,
-                    "backgroundColor": distinct_colors[color_index % len(distinct_colors)],
-                    "borderColor":distinct_colors[color_index % len(distinct_colors)],
-                    "fill": True,
-                    "data" : []
-                })
-                label_index = next(i for i, dataset in enumerate(data['data']['datasets']) if dataset['label'] == source_name)
-                for i in range(len(data['data']['labels'])):
-                    data['data']['datasets'][label_index]['data'].append(0)
-                    
-                
-            #label_index = next(i for i, dataset in enumerate(data['data']['datasets']) if dataset['label'] == source_name)
-            not_label_index = [i for i, dataset in enumerate(data['data']['datasets']) if dataset['label'] != source_name]
-                
-            if published_at not in data['data']['labels']:
-                data['data']['labels'].append(published_at)
-                date_index = data['data']['labels'].index(published_at)
-                data['data']['datasets'][label_index]['data'].append(1)
-                for i in not_label_index:
-                    data['data']['datasets'][i]['data'].append(0)
-            else:
-                date_index = data['data']['labels'].index(published_at)
-                #print(date_index)
-                #print(data['data']['datasets'][label_index]['data'])
-                data['data']['datasets'][label_index]['data'][date_index] += 1
-                
-            #print(data['data'])
-                
-            
+            # Code for line chart
+            pass
 
         elif chart_type == 'table':
             if source_name not in [row['source_name'] for row in data['data']]:

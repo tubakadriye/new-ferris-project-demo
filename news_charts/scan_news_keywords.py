@@ -9,7 +9,8 @@ from kafka import KafkaProducer
 # Configure the News API endpoint and API key
 NEWS_API_ENDPOINT = 'https://newsapi.org/v2/everything'
 # newsapi_key = context.secrets.get('NEWS_API_KEY')
-newsapi_key = '470b0ff17b994482bf1f4eacb76d11eb'
+#newsapi_key = '470b0ff17b994482bf1f4eacb76d11eb'
+newsapi_key = 'b4f1184ddcea4e3ebdaf59d269402ce9'
 # Configure the Kafka broker endpoint and topic
 KAFKA_BROKER_ENDPOINT = 'kafka.core:9092'
 #KAFKA_BROKER_ENDPOINT = 'localhost:9092'

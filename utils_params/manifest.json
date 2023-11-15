@@ -1,0 +1,7 @@
+{
+    "description": "Enter the package to be installed",
+    "entrypoint": "pip_list.py",
+    "tags": [ "utils", "demo"],
+    "allow_manual_triggering": true,
+    "active": true
+  }

@@ -1,0 +1,11 @@
+{
+    "fields": [
+        {
+            "type": "text",
+            "label": "Library / Module",
+            "name": "library_to_be_installed",
+            "required": true,
+            "description": "Enter the library or module that is to be (pip) installed"
+        }
+    ]
+}
