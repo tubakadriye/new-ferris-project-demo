@@ -1,6 +1,6 @@
 {
     "name": "k8x_streamlit",
-    "type": "k8s_job",
+    "type": "k8x_job",
     "description": "Deploying a Streamlit app",
     "allow_manual_triggering": true,
     "active": true,
