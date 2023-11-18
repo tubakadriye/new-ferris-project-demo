@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: hello-world
+spec:
+  template:
+    spec:
+      containers:
+        - name: hello-alpine
+          image: frolvlad/alpine-bash
+          command: [ "/bin/bash", "-c" ]
+          args: [ "echo BEGIN; env; sleep 5; echo ....testing1...; sleep 1; ls -la /usr/bin; echo ....testing2...; sleep 1; echo ...testing3...; sleep 5; echo .; sleep 1; echo ...testing4...; sleep 1; echo 'almost there'; echo 'there it is'; echo DONE!" ]
+          env:
+            - name: SERVICE_PORT
+              value: "80"
+      restartPolicy: Never
+

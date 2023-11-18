@@ -1,0 +1,8 @@
+{
+  "type": "k8x_job",
+  "description": "Deploying k8x job",
+  "allow_manual_triggering": true,
+  "active": true,
+  "trigger_events": ["ferris.apps.minio.file_uploaded"],
+  "tags": ["k8s"]
+}
